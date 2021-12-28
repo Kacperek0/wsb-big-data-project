@@ -1,6 +1,8 @@
+#!/usr/bin/env python3
+
 import sys
 
-def combiner():
+def reduce():
 
     last_key = None
     sum_value = 0
@@ -23,4 +25,4 @@ def combiner():
         print(f'{last_key}\t{sum_value}')
 
 if __name__ == '__main__':
-    combiner()
+    reduce()
