@@ -65,13 +65,16 @@ select
 from temp2 t2
 join zipcodes z on t2.postcode = z.postcode;
 
-create table if not exists results_injured
+create external table if not exists results_injured
 (
     address string,
     victim_type string,
     injury string,
     sum int
-);
+)
+row format delimited
+fields terminated by '\t'
+stored as textfile location '/project/hive/injured';
 
 create table if not exists results_killed
 (
@@ -79,7 +82,10 @@ create table if not exists results_killed
     victim_type string,
     injury string,
     sum int
-);
+)
+row format delimited
+fields terminated by '\t'
+stored as textfile location '/project/hive/killed';
 
 create view pedestrians_injured as
 select address, victim_type, injury, sum(number) as sum
