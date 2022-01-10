@@ -15,7 +15,8 @@ if $(hadoop fs -test -d /project) ; then hadoop fs -rm -f -r /project; fi
 if $(test -d results/) ; then rm -rf results/; fi
 # remove local csv files
 if $(test -d *.csv) ; then rm *.csv; fi
-
+# remove leftovers from hive memory
+hive -f hive/drop_all.hql
 
 echo " "
 echo ">>>> copying scripts, files and anything else that needs to be available in HDFS to launch this script"
@@ -52,4 +53,9 @@ echo " "
 echo " "
 echo " "
 echo ">>>> presenting the obtained the final result (6)"
-cat results/*
+echo " "
+echo ">>>> Injured"
+find results/injured/ -type d -exec bash -c 'cd "$0" && cat *' {} \;
+echo " "
+echo ">>>> Killed"
+find results/killed/ -type d -exec bash -c 'cd "$0" && cat *' {} \;
