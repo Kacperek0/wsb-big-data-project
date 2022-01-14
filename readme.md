@@ -6,7 +6,7 @@ After that Hive script is checking which incidets has happened on Manhattan and 
 
 ## Prerequisites
 
-- GCP stogare bucket with stored CSV files with initial data (change THIS[https://github.com/Kacperek0/wsb-big-data-project/blob/02ecb6bce5aefb3d90ebf0a9a30b60cdb6c411de/run.sh#L23] line to make run script work)
+- GCP stogare bucket with stored CSV files with initial data (change [THIS](https://github.com/Kacperek0/wsb-big-data-project/blob/02ecb6bce5aefb3d90ebf0a9a30b60cdb6c411de/run.sh#L23) line to make run script work)
 
 ## Running the project
 
@@ -32,7 +32,7 @@ chmod +x run.sh
 9. Profit :)
 
 ## Author
-Scripts has been developed by Kacperek0[https://github.com/Kacperek0]
+Scripts has been developed by [Kacperek0](https://github.com/Kacperek0)
 
 ### License
 
