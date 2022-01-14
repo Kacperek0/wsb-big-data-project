@@ -29,7 +29,7 @@ chmod +x run.sh
 ```bash
 ./run.sh
 ```
-9. Profit :)
+8. Profit :)
 
 ## Author
 Scripts has been developed by [Kacperek0](https://github.com/Kacperek0)
