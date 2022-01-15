@@ -31,6 +31,16 @@ chmod +x run.sh
 ```
 8. Profit :)
 
+### Alternative way of running the project
+
+1. Create *Storage bucket* and feed it with initial CSV files.
+2. Deploy *Dataproc cluster*.
+3. Connect via SSH with master node.
+4. Run init wrapper
+```bash
+curl https://raw.githubusercontent.com/Kacperek0/wsb-big-data-project/master/init.sh | bash
+```
+
 ## Author
 Scripts has been developed by [Kacperek0](https://github.com/Kacperek0)
 
